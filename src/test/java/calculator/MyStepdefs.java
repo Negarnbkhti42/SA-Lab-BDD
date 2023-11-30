@@ -25,6 +25,12 @@ public class MyStepdefs {
         System.out.println("testing with " + arg0 + " and " + arg1);
     }
 
+    @When("I add the two values")
+    public void iAddTheTwoValues() {
+        result = calculator.add(value1, value2);
+        System.out.print("addition: " + result);
+    }
+
     @When("^I divide first value by second value$")
     public void divideNumbers() {
         divisionResult = calculator.divide(value1, value2);
