@@ -18,7 +18,7 @@ public class MyStepdefs {
         calculator = new Calculator();
     }
 
-    @Given("^Two input values, (\\d+) and (\\d+)$")
+    @Given("Two input values, {int} and {int}")
     public void getTwoNumbers(int arg0, int arg1) {
         value1 = arg0;
         value2 = arg1;
@@ -28,7 +28,7 @@ public class MyStepdefs {
     @When("I add the two values")
     public void iAddTheTwoValues() {
         result = calculator.add(value1, value2);
-        System.out.print("addition: " + result);
+        System.out.println("addition: " + result);
     }
 
     @When("^I divide first value by second value$")
@@ -44,7 +44,7 @@ public class MyStepdefs {
     }
 
 
-    @Then("^I expect the result (\\d+)$")
+    @Then("I expect the result {int}")
     public void assertResult(int arg0) {
         Assert.assertEquals(result, arg0);
     }
