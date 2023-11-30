@@ -17,3 +17,4 @@ Feature: Calculator
       | first | second | result |
       | 4     | 1      | 2      |
       | 36    | 4      | 3  	|
+      | -4    | -1      | 2  	|

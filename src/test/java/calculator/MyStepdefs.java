@@ -22,18 +22,19 @@ public class MyStepdefs {
     public void getTwoNumbers(int arg0, int arg1) {
         value1 = arg0;
         value2 = arg1;
+        System.out.println("testing with " + arg0 + " and " + arg1);
     }
 
     @When("^I divide first value by second value$")
     public void divideNumbers() {
         divisionResult = calculator.divide(value1, value2);
-
+        System.out.println("division: " + divisionResult);
     }
 
     @Then("^I get the root$")
     public void getRoot() {
         result = calculator.root(divisionResult);
-
+        System.out.println("result: " + result);
     }
 
 
